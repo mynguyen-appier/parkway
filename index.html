@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nha Khoa Parkway – Người bạn trọn đời (demo prototype)</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preload" href="inter-vietnamese-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua đến nội dung</a>
+
+  <header class="site-header" id="site-header">
+    <div class="hdr-top">
+      <div class="container hdr-top__inner">
+        <a class="logo" href="#main"><img src="logo.png" alt="Nha Khoa Parkway – Người bạn trọn đời" width="198" height="74"></a>
+        <div class="hdr-tools">
+          <div class="hdr-tools__row">
+            <label class="search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="M16.5 16.5L21 21"/></svg>
+              <input type="search" aria-label="Tìm kiếm">
+            </label>
+            <button class="btn-phone" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>
+              1900 8059
+            </button>
+            <button class="btn-book" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="M7.5 13h2M11 13h2M14.5 13h2M7.5 16.5h2M11 16.5h2"/></svg>
+              Đặt lịch hẹn
+            </button>
+          </div>
+          <nav class="sublinks" aria-label="Liên kết nhanh">
+            <a href="#">Ưu đãi</a><a href="#">Niềng răng</a><a href="#">Kiến thức nha khoa</a><a href="#">Tin tức sự kiện</a>
+          </nav>
+        </div>
+        <button class="menu-btn" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="drawer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mainnav" aria-label="Menu chính">
+      <ul class="container mainnav__list" id="mainnav"></ul>
+    </nav>
+  </header>
+
+  <div class="drawer" id="drawer" hidden>
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <button class="drawer__close" type="button" aria-label="Đóng menu">&times;</button>
+      <ul class="drawer__list" id="drawer-list"></ul>
+      <div class="drawer__actions">
+        <button class="btn-phone" type="button">1900 8059</button>
+        <button class="btn-book" type="button">Đặt lịch hẹn</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="hero" aria-label="Nha Khoa Parkway">
+      <img class="hero__img" src="hero.png" alt="Tòa nhà Nha Khoa Parkway – Người bạn trọn đời" width="1405" height="642">
+      <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Ảnh trước"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="hero__arrow hero__arrow--next" type="button" aria-label="Ảnh sau"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <div class="dots dots--hero" aria-hidden="true"><span></span><span></span><span class="is-active"></span><span></span></div>
+    </section>
+
+    <div class="grad-line" aria-hidden="true"></div>
+
+    <section class="quick" aria-label="Truy cập nhanh">
+      <ul class="container quick__list" id="quick"></ul>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <h2 class="sec-title">Chăm sóc sức khoẻ răng miệng toàn diện</h2>
+        <ul class="svc-grid" id="svc-grid"></ul>
+      </div>
+    </section>
+
+    <section class="popular">
+      <div class="container">
+        <h2 class="sec-title">Dịch vụ đang được yêu thích</h2>
+        <ul class="prod-grid" id="prod-grid"></ul>
+      </div>
+    </section>
+
+    <section class="award">
+      <div class="container">
+        <p class="award__text">Tự hào là hệ thống nha khoa đạt danh hiệu <strong class="red">RED DIAMOND</strong> hàng đầu châu Á<br>về niềng Invisalign với <strong>1000+ ca/ năm.</strong></p>
+        <img class="award__img" src="trophy.png" alt="Invisalign Red Diamond Provider 2024" width="260" height="310">
+      </div>
+    </section>
+
+    <section class="doctors">
+      <div class="container">
+        <h2 class="sec-title">Gặp gỡ đội ngũ bác sĩ răng hàm mặt giàu kinh nghiệm</h2>
+        <p class="doctors__sub">Đội ngũ bác sĩ tâm đức chính trực, tận tâm với nghề và tận tụy với khách hàng.<br>Đội ngũ chuyên môn Nha khoa Parkway đặc biệt đề cao việc tuân thủ quy trình hội chẩn chuyên môn, và lắng nghe khách hàng (bệnh nhân).</p>
+      </div>
+      <div class="doc-stage">
+        <img class="doc-peek doc-peek--left" src="doc-peek-left.png" alt="" aria-hidden="true">
+        <img class="doc-peek doc-peek--right" src="doc-peek-right.png" alt="" aria-hidden="true">
+        <article class="doc-card">
+          <div class="doc-card__body">
+            <p class="doc-card__kicker">Bác sĩ</p>
+            <h3 class="doc-card__name">Phạm Thị Hà Xuyên</h3>
+            <ul class="doc-card__list">
+              <li>Bác sĩ điều trị chỉnh nha</li>
+              <li>Bác sĩ chuyên ngành Răng Hàm Mặt tại Đại học Y Hà Nội</li>
+              <li>Bác sĩ chuyên khoa 1 Đại học Y Dược Tp. Hồ Chí Minh</li>
+              <li>Chứng chỉ các khóa đào tạo chỉnh nha chuyên sâu:</li>
+              <li>Chứng chỉ khoá học : Yonsei international mini- recidency advanced for orthodontics , Yonsei University, Seoul, Korea 2022</li>
+              <li>Chứng chỉ khoá chỉnh nha ứng dụng lâm sàng NOW 2022</li>
+              <li>Chứng chỉ chỉnh nha khoá MEAW 2019</li>
+              <li>Chứng chỉ chỉnh nha khoá Minivis 2019</li>
+              <li>Chứng chỉ khoá học Invisalign:&nbsp; Step up 2020 Dr Lawrence Young</li>
+              <li>Chứng chỉ khoá invisalign : Aligners Elevation masterclass online course 2020</li>
+              <li>Chứng chỉ khoá Invisalign NOW Club 2022</li>
+            </ul>
+            <a class="btn-soft" href="#">Xem chi tiết</a>
+          </div>
+          <img class="doc-card__photo" src="doctor-1.png" alt="Bác sĩ Phạm Thị Hà Xuyên" width="282" height="419">
+        </article>
+        <button class="doc-arrow doc-arrow--prev" type="button" aria-label="Bác sĩ trước"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="doc-arrow doc-arrow--next" type="button" aria-label="Bác sĩ sau"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+      <div class="center"><a class="btn-outline" href="#">Xem tất cả bác sĩ</a></div>
+    </section>
+
+    <section class="celebs">
+      <div class="container">
+        <h2 class="sec-title">Người nổi tiếng niềng răng tại Nha Khoa Parkway</h2>
+        <div class="celebs__grid">
+          <figure class="celeb-big">
+            <img src="celeb-big.png" alt="Trinh Phạm" width="900" height="703">
+            <figcaption><span>Beauty blogger</span><strong>Trinh Phạm</strong></figcaption>
+          </figure>
+          <ul class="celeb-list" id="celeb-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="container">
+        <h2 class="sec-title">Hiệu quả trước và sau điều trị tại Nha Khoa Parkway</h2>
+        <div class="ba-wrap">
+          <button class="ba-arrow" type="button" aria-label="Trước"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <ul class="ba-grid" id="ba-grid"></ul>
+        </div>
+        <div class="dots dots--ba" aria-hidden="true"><span class="is-active"></span><span></span></div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="cities">
+      <div class="container">
+        <h2 class="sec-title">Tìm Parkway gần nhất</h2>
+        <ul class="city-grid" id="city-grid"></ul>
+      </div>
+    </section>
+
+    <section class="lead">
+      <form class="lead__card" id="lead-form" novalidate>
+        <h2>Để lại số điện thoại để được nhận cuộc gọi tư vấn miễn phí</h2>
+        <label for="f-name">Họ và tên*</label>
+        <input id="f-name" type="text" placeholder="Nhập tên của bạn" autocomplete="off">
+        <label for="f-phone">Số điện thoại*</label>
+        <input id="f-phone" type="tel" placeholder="Nhập số điện thoại" autocomplete="off">
+        <div class="center">
+          <button class="btn-cta" type="submit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>
+            ĐẶT LỊCH NGAY
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img class="footer__logo" src="logo-white.png" alt="Nha Khoa Parkway" width="144" height="114">
+        <img class="footer__dmca" src="dmca.png" alt="Protected by DMCA.com" width="142" height="54">
+        <p>Công ty chủ quản: CÔNG TY CỔ PHẦN Y TẾ PW</p>
+        <p>Địa chỉ: 215 Nam Kỳ Khởi Nghĩa, Phường Võ Thị Sáu, Q3, thành phố&nbsp; Hồ Chí Minh.</p>
+        <p>Email: it@nhakhoaparkway.com</p>
+        <p>CMSDN: 0315575273 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp lần đầu ngày 20/03/2019, sửa đổi lần thứ 7 ngày 09/06/2022.</p>
+        <p>Hiệu quả điều trị phụ thuộc vào cơ địa mỗi người (*)</p>
+      </div>
+      <div class="footer__col">
+        <h2>Giới thiệu</h2>
+        <ul><li><a href="#">Về Chúng Tôi</a></li><li><a href="#">Bảng Giá Dịch Vụ</a></li><li><a href="#">Tin tức sự kiện</a></li><li><a href="#">Kiến Thức Nha Khoa</a></li><li><a href="#">Chính sách bảo mật</a></li><li><a href="#">Tuyển dụng</a></li></ul>
+      </div>
+      <div class="footer__col">
+        <h2>Hệ thống phòng khám</h2>
+        <ul><li><a href="#">Tp. Hồ Chí Minh</a></li><li><a href="#">Hà Nội</a></li><li><a href="#">Các Tinh</a></li></ul>
+        <h2 class="footer__h2b">Giờ làm việc</h2>
+        <p>Từ 8:30 tới 18:30 tất cả các ngày trong tuần</p>
+      </div>
+      <div class="footer__col">
+        <h2>Liên hệ</h2>
+        <p class="footer__hotline">HOTLINE: 1900 8059</p>
+        <ul class="socials">
+          <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="7.5" width="14" height="9" rx="2.5"/><path d="M10.6 9.9v4.2l3.6-2.1z"/></svg></a></li>
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 19v-6.2h2.1l.3-2.4h-2.4V8.9c0-.7.2-1.2 1.2-1.2h1.3V5.6a17 17 0 00-1.9-.1c-1.9 0-3.1 1.1-3.1 3.2v1.7H8.6v2.4h2.1V19"/></svg></a></li>
+          <li><a href="#" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="7" width="14" height="10" rx="2"/><path d="M5.5 8l6.5 5 6.5-5"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>Người chịu trách nhiệm nội dung <strong>Giám đốc Bùi Thị Thanh Tâm - SĐT: 1900 8059</strong></p>
+    </div>
+    <p class="disclaimer">Independent demo prototype recreated from screenshots for a BotBonnie WebChat demonstration. Not affiliated with or endorsed by Nha Khoa Parkway.</p>
+  </footer>
+
+  <aside class="rail" aria-label="Liên hệ nhanh">
+    <button class="rail__toggle" type="button" aria-label="Thu gọn"><img src="rail-arrow.png" alt="" width="70" height="44"></button>
+    <div class="rail__panel">
+      <a href="#" aria-label="Gọi điện"><img src="rail-phone.png" alt="" width="70" height="48"></a>
+      <a href="#" aria-label="Đặt lịch"><img src="rail-cal.png" alt="" width="70" height="48"></a>
+      <a href="#" aria-label="Zalo"><img src="rail-zalo.png" alt="" width="70" height="50"></a>
+      <a href="#" aria-label="Messenger"><img src="rail-msg.png" alt="" width="70" height="48"></a>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+  <script>
+    // Never place BotBonnie API tokens, API secrets, or CRM keys in static frontend code.
+    const BOTBONNIE_PAGE_ID = "page-9b3be1d971b046a2bc216dd8";
+
+    window.BBAsyncInit = function () {
+      BB.init({
+        appId: BOTBONNIE_PAGE_ID
+      });
+    };
+  </script>
+  <script async type="text/javascript" src="https://asset.botbonnie.com/sdk/sdk.js"></script>
+</body>
+</html>
